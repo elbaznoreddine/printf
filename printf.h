@@ -20,7 +20,7 @@ int ft_print(char *format, ...);
 int ft_putstrc(char *s);
 int	ft_putnbrc(int n);
 int	ft_putcharc(char	c);
-int	ft_print_p(void *ptr);
+int	ft_print_p(unsigned int);
 int	ft_print_hex_dig(unsigned int  n, int flag, int base);
 
 #endif

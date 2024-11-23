@@ -12,12 +12,12 @@
 
 #include "printf.h"
 
-int	ft_print_p(void *ptr)
+int	ft_print_p(unsigned int add)
 {
 	int	count;
 	
 	count = 0;
-	unsigned	int add = (unsigned int)ptr;
+	//unsigned int add = (unsigned int)ptr;
 	count += ft_putstrc("0x");
 	count += ft_print_hex_dig(add, 0, 16);
 	return (count);
