@@ -10,17 +10,18 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef	PRINT_F
-# define PRINT_F
+#ifndef	FT_PRINT_F
+# define FT_PRINT_F
 #include <stdio.h>
 #include <stdarg.h>
 #include <unistd.h>
 
-int ft_print(char *format, ...);
+int ft_printf(const char *format, ...);
 int ft_putstrc(char *s);
 int	ft_putnbrc(int n);
 int	ft_putcharc(char	c);
-int	ft_print_p(unsigned int);
+int	ft_print_p(void *ptr);
 int	ft_print_hex_dig(unsigned int  n, int flag, int base);
+int	ft_show(char sp, va_list ap);
 
 #endif

@@ -10,12 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 int ft_putstrc(char *s)
 {
     int count = 0;
-    
+
+    if(!s)
+        return (write(1, "(null)", 6));
     while (*s)
     {
         write(1, s, 1);

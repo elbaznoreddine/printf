@@ -10,15 +10,32 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
-int	ft_print_p(unsigned int add)
+static int	print_hex_ptr(unsigned long p)
+{
+	int count;
+	char *hex;
+
+	count = 0;
+	hex = "0123456789abcdef";
+	if (p >= 16)
+	{
+		count += print_hex_ptr(p / 16);
+		count += print_hex_ptr(p % 16);
+	}
+	else
+		count += ft_putcharc(hex[p]);
+	return (count);
+}
+int	ft_print_p(void *ptr)
 {
 	int	count;
 	
 	count = 0;
-	//unsigned int add = (unsigned int)ptr;
 	count += ft_putstrc("0x");
-	count += ft_print_hex_dig(add, 0, 16);
+	if (!ptr)
+		return (count += ft_putcharc('0'));
+	count += print_hex_ptr((unsigned long)ptr);
 	return (count);
 }

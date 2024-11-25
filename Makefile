@@ -5,7 +5,8 @@ FT = ft_putstrc.c \
 	 ft_putcharc.c \
 	 ft_printf.c \
 	 ft_print_p.c \
-	 ft_print_hex_dig.c
+	 ft_print_hex_dig.c \
+	 ft_show.c
 
 OBJ = $(FT:.c=.o)
 
