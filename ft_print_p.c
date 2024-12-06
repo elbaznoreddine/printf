@@ -6,7 +6,7 @@
 /*   By: noel-baz <noel-baz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 14:59:11 by noel-baz          #+#    #+#             */
-/*   Updated: 2024/11/22 15:00:03 by noel-baz         ###   ########.fr       */
+/*   Updated: 2024/12/01 16:28:32 by noel-baz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 static int	print_hex_ptr(unsigned long p)
 {
-	int count;
-	char *hex;
+	int		count;
+	char	*hex;
 
 	count = 0;
 	hex = "0123456789abcdef";
@@ -28,10 +28,11 @@ static int	print_hex_ptr(unsigned long p)
 		count += ft_putcharc(hex[p]);
 	return (count);
 }
+
 int	ft_print_p(void *ptr)
 {
 	int	count;
-	
+
 	count = 0;
 	count += ft_putstrc("0x");
 	if (!ptr)

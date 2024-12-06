@@ -6,15 +6,12 @@
 /*   By: noel-baz <noel-baz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 16:07:12 by noel-baz          #+#    #+#             */
-/*   Updated: 2024/11/25 16:14:34 by noel-baz         ###   ########.fr       */
+/*   Updated: 2024/12/01 16:29:12 by noel-baz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-// static int is_sp(char c)
-// {
-// 	return (c == 's' || c == 'i' || c == 'd' || c == 'X' || c == 'x' || c == 'u' || c == 'p' || c == 'c');
-// }
+
 int	ft_show(char sp, va_list ap)
 {
 	if (sp == 's')

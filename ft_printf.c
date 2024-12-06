@@ -6,20 +6,22 @@
 /*   By: noel-baz <noel-baz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 14:40:22 by noel-baz          #+#    #+#             */
-/*   Updated: 2024/11/22 14:59:39 by noel-baz         ###   ########.fr       */
+/*   Updated: 2024/12/01 16:28:40 by noel-baz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int is_sp(char c)
+static int	is_sp(char c)
 {
-	return (c == 's' || c == 'i' || c == 'd' || c == 'X' || c == 'x' || c == 'u' || c == 'p' || c == 'c');
+	return (c == 's' || c == 'i' || c == 'd' || c == 'X'
+		|| c == 'x' || c == 'u' || c == 'p' || c == 'c');
 }
-static int check_format(const char *format, va_list ap)
+
+static int	check_format(const char *format, va_list ap)
 {
-	int i;
-	int count;
+	int	i;
+	int	count;
 
 	i = 0;
 	count = 0;
@@ -36,7 +38,7 @@ static int check_format(const char *format, va_list ap)
 			if (format[i + 1])
 				count += ft_putcharc(format[++i]);
 			else
-				break;
+				break ;
 		}
 		else
 			count += ft_putcharc(format[i]);
@@ -44,16 +46,17 @@ static int check_format(const char *format, va_list ap)
 	}
 	return (count);
 }
-int ft_printf(const char *format, ...)
+
+int	ft_printf(const char *format, ...)
 {
-    va_list argument_pointer;
-    int counter_format;
+	va_list	argument_pointer;
+	int		counter_format;
 
 	counter_format = 0;
-	if(write(1, "", 0) == -1)
+	if (write(1, "", 0) == -1)
 		return (-1);
-    va_start(argument_pointer, format);
+	va_start(argument_pointer, format);
 	counter_format += check_format(format, argument_pointer);
-    va_end(argument_pointer);
-	return(counter_format);
+	va_end(argument_pointer);
+	return (counter_format);
 }

@@ -6,16 +6,17 @@
 /*   By: noel-baz <noel-baz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 14:58:56 by noel-baz          #+#    #+#             */
-/*   Updated: 2024/11/22 14:59:00 by noel-baz         ###   ########.fr       */
+/*   Updated: 2024/12/01 16:28:59 by noel-baz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putcharc(char	c)
+int	ft_putcharc(char c)
 {
-	int count = 0;
-	
+	int	count;
+
+	count = 0;
 	count = write(1, &c, 1);
 	return (count);
 }

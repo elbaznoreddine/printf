@@ -6,7 +6,7 @@
 /*   By: noel-baz <noel-baz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 14:58:47 by noel-baz          #+#    #+#             */
-/*   Updated: 2024/11/22 14:58:51 by noel-baz         ###   ########.fr       */
+/*   Updated: 2024/12/01 16:29:03 by noel-baz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,11 @@
 
 int	ft_putnbrc(int n)
 {
-	int	count = 0;
+	int	count;
+
+	count = 0;
 	if (n == -2147483648)
-	{
-		int n = write(1 ,"-2147483648", 11);
-		return (n);
-	}
+		return (write(1, "-2147483648", 11));
 	if (n < 0)
 	{
 		count += ft_putcharc('-');

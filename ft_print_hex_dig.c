@@ -6,16 +6,16 @@
 /*   By: noel-baz <noel-baz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/22 14:59:21 by noel-baz          #+#    #+#             */
-/*   Updated: 2024/11/22 15:02:39 by noel-baz         ###   ########.fr       */
+/*   Updated: 2024/12/01 16:28:27 by noel-baz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_print_hex_dig(unsigned int  n, int flag, int base)
+int	ft_print_hex_dig(unsigned int n, int flag, int base)
 {
-	int count;
-	char *hex;
+	int		count;
+	char	*hex;
 
 	count = 0;
 	if (flag == 1)
